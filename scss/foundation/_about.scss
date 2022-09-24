@@ -1,0 +1,167 @@
+@use "../global" as *;
+
+.about {
+	&__top {
+		width:100%;
+    height:55vh;
+    overflow: hidden;
+    background-image: url(../img/about-top.png);
+    background-size: cover;
+    background-position: 0% 50%;
+	}
+
+	&-main-1 {
+		width:100%;
+		&__wrapper {
+		}
+		&__block {
+			width:100%;
+			max-width: 960px;
+			margin:3% auto;
+			@include flex(space-evenly);
+			@include mq(tab){
+				flex-direction: column;
+			}
+		}
+		&__img {
+			width:35%;
+			@include mq(pc){
+				width:40%;
+			}
+			@include mq(tab){
+				width:65%;
+			}
+			@include mq(sp){
+				width:100%;
+				height: 30vh;
+			}
+			img{
+				width:100%;
+				height: 42vh;
+				object-fit: cover;
+				@include mq(pc){
+					height: 30vh;
+				}
+
+				@include mq(tab){
+					height: 100%;
+				}
+			}
+		}
+		&__text {
+			width:45%;
+			@include mq(tab){
+				width:100%;
+			}
+		}
+		&__head {
+			@include fz(24);
+			font-weight: normal;
+			margin-bottom:10px;
+			@include mq(tab){
+				@include fz(16);
+				margin-top:10px;
+				
+			}
+		}
+		&__txt {
+			width:100%;
+			margin-bottom:10px;
+			@include mq(tab){
+				@include fz(12);
+			}
+			&:last-of-type {
+				margin-bottom:30px;
+			}
+		}
+		&__unit {
+			text-align: end;
+		}
+	}
+
+	&-main-2 {
+		background-image: url(../img/about-top.png);
+		width: 100%;
+		height: 60vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+		position: relative;
+		@include mq(pc){
+			height: 30vh;
+		}
+		@include mq(sp){
+			height: 45vh;
+		}
+		&::after{
+			content:"";
+			position: absolute;
+			top:0;
+			left:0;
+			z-index: 1;
+			background-color: rgba($color: $cWhite, $alpha: 0.6);
+			width:100%;
+			height:100%;
+		}
+		&__wrapper {
+			z-index: 2;
+			padding:2% 3% 4%;
+			box-sizing: border-box;
+			background-color: $cWhite;
+			position:absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			margin:0 auto;
+			@include mq(sp){
+				
+			}
+		}
+		&__txt {
+			text-align: center;
+			@include mq(tab){
+				@include fz(12);
+				text-align: left;
+			}
+		}
+	}
+
+	&-main-3 {
+		width:100%;
+		&__table {
+			width:80%;
+			margin:5% auto;
+			border-top: 1px solid $cGreen;
+			@include mq(sp){
+				width:100%;
+			}
+		}
+		&__tr {
+			
+		}
+		&__th {
+			font-weight: normal;
+			padding:3%;
+			box-sizing: border-box;
+			background-color: $cGreen;
+			text-align: start;
+			border-bottom: 1px solid $cWhite;
+			color:$cWhite;
+			@include mq(sp){
+				display: block;
+				@include fz(14);
+			}
+		}
+		&__td {
+			padding:3%;
+			box-sizing: border-box;
+			background-color: $cWhite;
+			border:1px solid $cGreen;
+			@include mq(sp){
+				display: block;
+				@include fz(14);
+			}
+		}
+	}
+
+}

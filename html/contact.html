@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>葛木建設</title>
+  <meta name="description" content="「住み心地のよさ」を大切にあらゆる「建築」に携わります。地域の未来を考えて、よりよく住むためのお手伝いを「建築」を通して実現していきます。">
+  <meta name="keywords" content="建設会社、建設事業、土木事業">
+  <meta property="og:title" content="株式会社葛木建設">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://withcode-plus.tech">
+  <meta property="og:image" content="img/logo.png">
+  <meta property="og:description" content="「「住み心地のよさ」を大切にあらゆる「建築」に携わります。地域の未来を考えて、よりよく住むためのお手伝いを「建築」を通して実現していきます。">
+  <meta property="og:site_name" content="建築会社HP">
+  <link rel="icon" href="../img/logo3.png">
+  <link rel="apple-touch-icon" sizes="180×180" href="../img/logo3.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+	<header id="header" class="header">
+    <div class="header__logo">
+      <a href="../index.html"><img src="../img/logo2.png" alt="ロゴ"></a>
+    </div>
+    <div class="header__right">
+      <nav class="gnav" >
+        <ul class="gnav__list">
+          <li class="gnav__item"><a href="service.html" class="gnav__link">事業内容</a></li>
+          <li class="gnav__item"><a href="about.html" class="gnav__link">会社概要</a></li>
+          <li class="gnav__item"><a href="news.html" class="gnav__link">お知らせ</a></li>
+          <li class="gnav__item"><a href="blog.html" class="gnav__link gnav__blog">ブログ</a></li>
+          <li class="gnav__item"><a href="contact.html" class="gnav__link gnav__contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger"><span></span><span></span><span></span></div> 
+      <div class="contact-icon">
+          <a href="contact.html" class="contact-icon__img">
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+      </div>
+    </div>    
+  </header>
+
+	<main>
+		<div class="top">
+			<div class="contact__top"></div>
+			<div class="top__ttl">
+				<h2 class="ttl secondary__top__ttl">
+          <span class="ttl__main secondary__top__main">CONTACT</span>
+          <span class="ttl__sub secondary__top__sub">お問い合わせ</span>
+        </h2>
+			</div>
+		</div><!--TOP-->
+
+		<div class="breadcrumb" id="breadcrumb">
+			<div class="breadcrumb-wrapper">
+				<ul class="breadcrumb-wrapper__list">
+					<li class="breadcrumb-wrapper__list__item">
+						<a href="../index.html" class="breadcrumb-wrapper__list__item__link"><span>ホーム</span></a>
+					</li>
+					<li class="breadcrumb-wrapper__list__item">
+						<a href="service.html" class="breadcrumb-wrapper__list__item__link"><span>お問い合わせ</span></a>
+					</li>
+				</ul>
+			</div>
+		</div><!--BREADCRUMB-->
+
+		<div class="contact-main">
+			<div class="contact-main__wrapper ">
+				<p class="contact-main__txt fadeUpTrigger">お問い合わせについては、<br class="cp">下記フォームにて承っています。<br>
+					必要事項をご入力の上送信してください。</p>
+					<form action="#" class="contact-main__form fadeUpTrigger" >
+						<div class="contact-main__box">
+								<label for="company_name" class="contact-main__box-ttl">お問い合わせ内容</label>
+								<select name="お問い合わせ項目" required="required" class="contact-main__box-select">
+									<optgroup value>
+										<option value="選択してください" hidden class="contact-main__box-select-with">選択してください</option>
+										<option value="建設事業について" class="contact-main__box-select-with">建設事業について</option>
+										<option value="土木事業について" class="contact-main__box-select-with">土木事業について</option>
+										<option value="土木事業について" class="contact-main__box-select-with">注文住宅について</option>
+										<option value="土木事業について" class="contact-main__box-select-with">リフォーム・増設について</option>
+										<option value="その他" class="contact-main__box-select-with">その他</option>
+									</optgroup>
+								</select>
+						</div>
+						<div class="contact-main__box">
+							<label for="company_managername" class="contact-main__box-ttl">個人/法人・団体</label>
+							<input type="radio" name="type" class="contact-main__box-form-radio visually-hidden" value="個人" id="check"><label for="check" class="contact-main__box-form-radio-label">個人</label>
+							<input type="radio" name="type" class="contact-main__box-form-radio visually-hidden" value="法人・団体" id="check"><label for="check" class="contact-main__box-form-radio-label">法人・団体</label>
+					</div>
+						<div class="contact-main__box">
+								<label for="company_managername" class="contact-main__box-ttl">法人・団体名</label>
+								<input type="text" name="" class="contact-main__box-form" placeholder="例）葛木建設">
+						</div>
+						<div class="contact-main__box">
+								<label for="email" class="contact-main__box-ttl">お名前</label>
+								<input type="text" name="" class="contact-main__box-form" placeholder="例）葛木　太郎">
+						</div>
+						<div class="contact-main__box">
+							<label for="email" class="contact-main__box-ttl">メールアドレス</label>
+							<input type="text" name="" class="contact-main__box-form" placeholder="例）kathuragi@kathuragi.jp">
+					</div>
+						<div class="contact-main__box">
+								<label for="tel" class="contact-main__box-ttl">お電話番号</label>
+								<input type="text" name="" class="contact-main__box-form" placeholder="例）000-0000-0000">
+						</div>
+						<div class="contact-main__box _area">
+								<label for="message" class="contact-main__box-ttl">お問い合わせ内容</label>
+								<textarea name="message" id="message" class="contact-main__box-textarea" required="required" placeholder="ここに入力してください。"></textarea>
+						</div>
+						<button type="submit" class="btn contact-main__btn">送信</button>
+				</form>
+			</div>
+		</div>
+
+		<section class="contact">
+      <div class="contact__wrapper ">
+        <h2 class="ttl contact__ttl">
+          <span class="ttl__main contact__ttl__main">CONTACT</span>
+          <span class="ttl__sub contact__ttl__sub">コンタクト</span>
+        </h2>
+        <p class="contact__txt">各種お問い合わせはこちらまで</p>
+        <div class="btn contact__btn">
+          <a href="#" class="btn__link"><span class="btn__txt contact__btn__txt">詳しく見る</span><span class="btn__arrow contact__btn__arrow"></span></a>
+        </div>
+      </div>
+    </section><!--CONTACT-->
+		<footer class="footer">
+			<div class="footer__wrapper ">
+				<div class="footer__block1">
+					<ul class="footer__list1">
+						<li class="footer__item"><a href="../index.html" class="footer__link">ホーム</a></li>
+						<li class="footer__item"><a href="service.html" class="footer__link">事業内容</a></li>
+						<li class="footer__item"><a href="about.html" class="footer__link">企業概要</a></li>
+					</ul>
+					<ul class="footer__list2">
+						<li class="footer__item"><a href="news-single.html" class="footer__link">お知らせ</a></li>
+						<li class="footer__item"><a href="blog.html" class="footer__link">ブログ</a></li>
+						<li class="footer__item"><a href="contact.html" class="footer__link">お問い合わせ</a></li>
+					</ul>
+				</div>
+				<div class="footer__block2">
+					<div class="footer__head">
+						<div class="footer__logo">
+							<a href="../index.html"><img src="../img/logo2.png" alt="ロゴ"></a>
+						</div>
+						<ul class="footer__sns">
+							<li class="footer__icon"><a href="#" class="footer__icon__link"><i class="fa-brands fa-twitter"></a></i></li>
+							<li class="footer__icon"><a href="#" class="footer__icon__link"><i class="fa-brands fa-facebook"></a></i></li>
+						</ul>
+					</div>
+					<ul class="footer__txt">
+						<li class="footer__adress">〒０００−９９９９</li>
+						<li class="footer__adress">北海道葛城市葛城町5丁目2ー100</li>
+						<li class="footer__tel">TEL.0987-1111-2222</li>
+						<li class="footer__date">営業時間：９：００−１７：００&emsp;定休日：土曜・日曜・祝日</li>
+					</ul>
+				</div>
+			</div>
+			<small>©︎2022.kathuragi</small>
+		</footer>
+	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/main.js"></script>
+	</body>
+	</html>

@@ -1,0 +1,454 @@
+@use "../global" as *;
+
+
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: $fNotoSans;
+  line-height: 1.8;
+  letter-spacing: 0px;
+  word-break: break-all;
+  color: $cBlack;
+  padding-top: 75px;
+  @include mq(sp){
+    padding-top:60px;
+    line-height: 2;
+    letter-spacing: 0.05em;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $cBlack;
+}
+
+li {
+  list-style: none;
+}
+
+.section__inner {
+  width:74.5%;
+  margin:120px auto;
+  @include mq(pc){
+    width:80%;
+  }
+  @include mq(sp){
+    width:74.5%;
+    margin:80px auto;
+  }
+}
+
+.ttl {
+  text-align: left;
+  margin-bottom: 40px;
+  line-height: 1.5;
+  @include fz(48);
+  font-family: $fSwarabi;
+  font-weight: normal;
+  @include mq(sp){
+    @include fz(30);
+  }
+  &__main {
+    position: relative;
+    &::before {
+      content:"";
+      width:60px;
+      height: 9px;
+      position: absolute;
+      top:-5px;
+      left:0;
+      background-color: $cGreen;
+      @include mq(sp){
+        width:40px;
+        height:6px;
+      }
+    }
+  }
+  &__sub{
+    margin-top:0px;
+    margin-left:1.8rem;
+    display: block;
+    @include fz(20);
+    font-weight: normal;
+    font-family: $fSwarabi;
+    text-align: left;
+    @include mq(sp) {
+      @include fz(16);
+      margin-left:0.8rem;
+    }
+  }
+}
+
+.top__ttl {
+  position: absolute;
+  background-color: rgba($color: $cWhite, $alpha: 0.9);
+  top:50%;
+  left:400px;
+  transform: translate(-50%,-50%);
+  width:600px;
+  padding:3% 1% 3% 5%;
+  box-sizing: border-box;
+  @include flex(left);
+  @include mq(tab){
+    width:320px;
+    left:220px;
+  }
+  @include mq(sp){
+    left:155px;
+    width:249px;
+  }
+}
+
+.secondary__top {
+  &__ttl {
+    margin-bottom: 0;
+    @include mq(tab){
+      @include fz(30);
+    }
+    @include mq(sp){
+      @include fz(24);
+    }
+  }
+  &__main {
+    &::before {
+      @include mq(tab){
+        width:35px;
+        height:3px;
+        top:0px;
+      }
+    }
+    
+  }
+  &__sub {
+    margin-left:0;
+    @include mq(tab){
+      @include fz(16);
+    }
+    @include mq(sp){
+      @include fz(14);
+    }
+  }
+}
+
+.btn {
+  text-align: end;
+  @include mq(sp){
+    text-align: center;
+  }
+  &__link {
+    display: inline-flex;
+    height: 62px;
+    background-color: $cBlack;
+    color: $cWhite;
+    transition: 0.3s;
+    @include mq(sp){
+      height: 50px;
+    }
+    &:hover {
+      background-color: $cWhite;
+      transition:0.3s;
+      color:$cBlack;
+    }
+  }
+  &__txt {
+    flex:0 1 auto;
+    @include flex();
+    padding:0 35px;
+    transition:0.3s;
+    border:1px solid $cBlack;
+    @include mq(sp){
+      @include fz(14);
+    }
+    &:hover {
+      transition: 0.3s;
+      color:$cBlack;
+    }
+  }
+  &__arrow {
+    flex: 0 0 auto;
+    width:67px;
+    stroke: $cWhite;
+    @include flex();
+    background-color: $cGreen;
+    position: relative;
+    @include mq(sp){
+      width:50px;
+    }
+    &::before {
+      content:"";
+      width:13px;
+      height: 13px;
+      border-top:2px solid $cWhite;
+      transform: rotate(45deg);
+      @include mq(sp){
+        width:10px;
+        height: 10px;
+        position: absolute;
+        right:17px;
+      }
+    }
+    &::after {
+      content:"";
+      position: absolute;
+      top:50%;
+      left:18px;
+      transform: translateY(-50%);
+      width:25px;
+      height: 2px;
+      background-color: $cWhite;
+      @include mq(sp){
+        width:17px;
+      }
+    }
+  }
+}
+
+
+
+.breadcrumb {
+  &-wrapper {
+    @include fz(14);
+    @include flex(end);
+    position:relative;
+    top:34px;
+    &__list {
+      background-color: $cGreen;
+      min-width:40%;
+      max-width:60%;
+      padding:16px 38px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      @include mq(sp){
+        width:75%;
+        max-width: unset;
+        padding:5px 15px;
+      }
+      &__item {
+        &::after {
+          content:">";
+          padding:0 5px;
+          color: $cWhite;
+          position: relative;
+          top:1px;
+        }
+        &:last-child::after {
+          content:"";
+        }
+        &__link {
+          color:$cWhite;
+          @include mq(sp){
+            @include fz(10);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.Pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	&-Item-Link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		width: 45px;
+		height: 45px;
+		background: $cGreen;
+		border: solid 2px $cGreen;
+		font-size: 14px;
+		color: $cWhite;
+		font-weight: bold;
+		transition: all 0.15s linear;
+    @include mq(sp){
+      width:35px;
+      height: 35px;
+    }
+	}
+}
+.Pagination
+.Pagination-Item-Link-Icon {
+width: 20px;
+}
+.Pagination-Item-Link.isActive {
+background: $cWhite;
+color: $cGreen;
+pointer-events: none;
+}
+.Pagination-Item-Link:not(.isActive):hover {
+background: $cWhite;
+color: $cGreen;
+}
+.Pagination > * + * {
+margin-left: 12px;
+}
+
+/*アニメーション*/
+/*スクロールすると左から背景色が伸びる*/
+
+/*背景色が伸びて出現 共通*/
+.bgextend{
+	animation-name:bgextendAnimeBase;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+	position: relative;
+	overflow: hidden;/*はみ出た色要素を隠す*/
+	opacity:0;
+}
+
+@keyframes bgextendAnimeBase{
+  from {
+    opacity:0;
+  }
+
+  to {
+    opacity:1;  
+}
+}
+
+.bgLRextendTrigger {
+  opacity: 0;
+}
+
+.bgappearTrigger {
+  opacity: 0;
+}
+
+/*中の要素*/
+.bgappear{
+	animation-name:bgextendAnimeSecond;
+	animation-duration:1s;
+	animation-delay: 0.1s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+}
+
+@keyframes bgextendAnimeSecond{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+}
+}
+
+/*--------- 左から --------*/
+.bgLRextend::before{
+	animation-name:bgLRextendAnime;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $cGreen;/*伸びる背景色の設定*/
+}
+@keyframes bgLRextendAnime{
+	0% {
+		transform-origin:left;
+		transform:scaleX(0);
+	}
+	50% {
+		transform-origin:left;
+		transform:scaleX(1);
+	}
+	50.001% {
+		transform-origin:right;
+	}
+	100% {
+		transform-origin:right;
+		transform:scaleX(0);
+	}
+}
+
+/*フェードアップ*/
+/* fadeUp */
+.fadeUp {
+  animation: fadeUpAnime 0.8s forwards;  /* fadeUpAnimeを0.8秒で一回実行 */
+  opacity: 0;
+}
+
+.fadeUpTrigger {
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime { 
+  from { 
+    opacity: 0; /* 初めは見えないようにしておく */ 
+    transform: translateY(100px);  /* 100px下に動かしておく */ 
+  } 
+
+  to { 
+    opacity: 1;  /* 可視化する */ 
+    transform: translateY(0);  /* 元の位置に戻す */ 
+  }
+} 
+
+@media screen and (min-width: 680px) {
+    .pc {
+      display: inline;
+    }
+    .sp {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 680px) {
+    .pc {
+      display: none;
+    }
+    .sp {
+      display: inline;
+    }
+  }
+
+/*一度のみフェードアップ*/
+
+/* 下から */
+
+.fadeUp1{
+  animation-name:fadeUpAnime1;
+  animation-duration:0.8s;
+  animation-delay: 0.3s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+  
+  @keyframes fadeUpAnime1{
+    from {
+      opacity: 0;
+    transform: translateY(30px);
+    }
+  
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }
+
+  .fadeUp2{
+    animation-name:fadeUpAnime1;
+    animation-duration:0.8s;
+    animation-delay: 1.0s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+    
+    @keyframes fadeUpAnime1{
+      from {
+        opacity: 0;
+      transform: translateY(30px);
+      }
+    
+      to {
+        opacity: 1;
+      transform: translateY(0);
+      }
+    }
+  

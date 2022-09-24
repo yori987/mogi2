@@ -1,0 +1,111 @@
+@use "../global" as *;
+
+.service {
+	&__top {
+		width:100%;
+    height:55vh;
+    overflow: hidden;
+    background-image: url(../img/service-top.png);
+    background-size: cover;
+    background-position: 0% 50%;
+	}
+	&-main {
+		margin-top:15%;
+		&__wrapper {
+			
+		}
+		&__list {
+			@include flex();
+			flex-direction: column;
+			width: 100%;
+		}
+		&__item {
+			width:100%;
+			//min-width: 700px;//
+			height: 55vh;
+			margin:0 auto;
+			position: relative;
+			margin-bottom:10vh;
+			@include mq(pc){
+				height:35vh;
+			}
+			@include mq(tab){
+				height: 38vh;
+			}
+			@include mq(sp){
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				height: unset;
+				margin-bottom:5vh;
+			}
+		}
+		&__img {
+			width:60%;
+			height: 100%;
+			position: absolute;
+			top:0;
+			left:0;
+			z-index: 5;
+			@include mq(sp){
+				width:100%;
+				position: unset;
+				height: 25vh;
+			}
+			&_reverce {
+				left:unset;
+				right:0;
+			}
+			img {
+				width:100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		&__text {
+			width:60%;
+			position: absolute;
+			top:75px;
+			right:0;
+			z-index: 10;
+			background-color: $cWhite;
+			padding:45px 60px 55px;
+			box-sizing: border-box;
+			@include mq(pc){
+				
+			}
+			@include mq(tab){
+				padding:30px 35px;
+			}
+			@include mq(sp){
+				width:100%;
+				position: unset;
+				
+				padding:5%;
+			}
+			&_reverce {
+				left:0;
+			}
+		}
+		&__ttl{
+			margin-bottom:10px;
+			&__main {
+			@include fz(24);
+			@include mq(tab){
+				@include fz(20);
+			}
+			&::before {
+				width:30px;
+				height: 4px;
+				}
+			}
+		}
+		&__txt {
+			@include mq(tab){
+				@include fz(14);
+			}
+		}
+	
+	}
+
+}

@@ -1,0 +1,185 @@
+@use "../global" as *;
+
+.header {
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 100;
+  background-color: $cWhite;
+  width:100%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  @include mq(sp){
+    height: 60px;
+  }
+    &__logo {
+      width:150px;
+      margin-left:1.5%;
+      position: relative;
+      top:3px;
+      @include mq(sp){
+        width: 100px;
+        margin-left:3%;
+      }
+      img {
+          width:100%;
+          height: 100%;
+      }
+  }
+  &__right {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      .gnav {
+        @include mq(sp){
+          position:fixed;
+          z-index: 999;
+          /*ナビのスタート位置と形状*/
+          bottom:-120%;
+            left:0;
+          width:100%;
+            height: 100vh;/*ナビの高さ*/
+          background:$cGreen;
+            /*動き*/
+          transition: all 0.6s;
+          &.panelactive{
+            bottom: 0;
+          }
+        }
+        &__list {
+              display: flex;
+              align-items: center;
+              @include mq(sp){
+                position: absolute;
+                z-index: 999;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                display: block;
+              }
+          }
+        &__item {
+              @include mq(sp){
+                text-align: center; 
+              }
+          }
+          &__link {
+              padding:0 38px 0 0 ;
+              @include fz(16);
+              font-family: $fSwarabi;
+              position: relative;
+              &:hover {
+                color:$cGreen;
+                &::after {
+                  transform: scale(1, 1);/*X方向にスケール拡大*/
+                }
+              }
+              &::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 65px;
+                height: 2px;
+                background:$cGreen;
+                transition: all .3s;
+                transform: scale(0, 1);/*X方向0、Y方向1*/
+                transform-origin: left top;/*左上基点*/
+              }
+              @include mq(sp){
+                color: $cWhite;
+                text-decoration: none;
+                padding:10px;
+                display: block;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                font-weight: bold;
+              }
+          }
+          &__blog {
+            &::after {
+              width: 50px;
+            }
+          }
+          &__contact {
+            display: none;  
+            @include mq(sp){
+              display: block;
+            }
+          }
+      }
+        .contact-icon {
+          display: block;
+          @include mq(sp){
+            display: none;
+          }
+          &__img {
+                  width:75px;
+                  height: 75px;
+                  background-color: $cGreen;
+                  display: inline-flex;
+                  text-align: center;
+                  align-items: center;
+                  justify-content: center;
+                  i {
+                  @include fz(36);
+                  color: $cWhite;
+                  }
+              
+          }
+      }
+  }
+  .hamburger {
+    visibility: hidden;
+    @include mq(sp){
+      visibility: visible;
+      position:fixed;
+      z-index: 9999;/*ボタンを最前面に*/
+      top:0px;
+      right: -10px;
+      cursor: pointer;
+      width: 80px;
+      height:50px;
+      span {
+        display: inline-block;
+        transition: all .4s;
+        position: absolute;
+        left: 14px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: $cGreen;
+        width: 45%;
+        &:nth-of-type(1) {
+          top:15px;	
+        }
+        &:nth-of-type(2) {
+          top:28px;
+        }
+        &:nth-of-type(3) {
+          top:42px;
+        }
+      }
+      &.active span {
+        &:nth-of-type(1) {
+          top: 28px;
+          left: 18px;
+          transform: translateY(6px) rotate(-45deg);
+          width: 30%;
+          background-color: $cWhite;
+        }
+        &:nth-of-type(2) {
+          opacity: 0;
+        }
+        &:nth-of-type(3){
+          top: 40px;
+          left: 18px;
+          transform: translateY(-6px) rotate(45deg);
+          width: 30%;
+          background-color: $cWhite;
+        }
+      }
+    }
+  }
+}
