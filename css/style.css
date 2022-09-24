@@ -1192,6 +1192,11 @@ li {
   width: 80%;
   margin: 10% auto;
 }
+@media screen and (max-width: 1024px) {
+  .contact-main__wrapper {
+    width: 90%;
+  }
+}
 .contact-main__txt {
   font-size: 1.25rem;
   text-align: center;
@@ -1224,18 +1229,6 @@ li {
 }
 .contact-main__box .area {
   align-items: baseline;
-}
-.contact-main__box .visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
 }
 .contact-main__box-ttl {
   width: 30%;
@@ -1307,43 +1300,6 @@ li {
     width: 100%;
   }
 }
-.contact-main__box-form-radio:checked + .contact-main__box-form-radio-label::after {
-  opacity: 1;
-}
-.contact-main__box-form-radio-label {
-  padding-left: 30px;
-  position: relative;
-  cursor: pointer;
-}
-@media screen and (max-width: 480px) {
-  .contact-main__box-form-radio-label {
-    font-size: 0.875rem;
-  }
-}
-.contact-main__box-form-radio-label::before, .contact-main__box-form-radio-label::after {
-  content: "";
-  display: block;
-  border-radius: 50%;
-  position: absolute;
-  transform: translateY(-50%);
-  top: 50%;
-}
-.contact-main__box-form-radio-label::before {
-  background-color: #fff;
-  border: 1px solid #D9D9D9;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  left: 5px;
-}
-.contact-main__box-form-radio-label::after {
-  background-color: #2D9648;
-  border-radius: 50%;
-  opacity: 0;
-  width: 16px;
-  height: 16px;
-  left: 7px;
-}
 .contact-main__box-textarea {
   width: 70%;
   height: 30vh;
@@ -1401,7 +1357,7 @@ li {
   display: flex;
   width: 30%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .footer__block1 {
     width: 100%;
   }
@@ -1418,7 +1374,7 @@ li {
   top: -40px;
   right: -160px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .footer__block2 {
     top: 0;
     left: 0;
@@ -1432,7 +1388,7 @@ li {
 .footer__logo {
   width: 35%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .footer__logo {
     width: 40%;
   }
@@ -1446,7 +1402,7 @@ li {
   justify-content: center;
   margin-left: 10%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .footer__sns {
     margin-left: 10%;
   }
@@ -1463,7 +1419,7 @@ li {
 .footer__icon .fa-brands {
   font-size: 38px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .footer__icon .fa-brands {
     font-size: 30px;
   }
@@ -1498,7 +1454,7 @@ li {
   text-align: center;
   font-size: 0.875rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .footer small {
     margin-top: 5%;
   }

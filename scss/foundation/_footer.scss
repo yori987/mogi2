@@ -16,7 +16,7 @@
 	&__block1 {
 		display: flex;
 		width:30%;
-		@include mq(tab){
+		@include mq(pc){
 			width:100%;
 		}
 	}
@@ -31,7 +31,7 @@
 		position: relative;
 		top:-40px;
 		right:-160px;
-		@include mq(tab){
+		@include mq(pc){
 			top:0;
 			left:0;
 			margin-top:20%;
@@ -43,7 +43,7 @@
 	}
 	&__logo {
 		width:35%;
-		@include mq(tab){
+		@include mq(pc){
 			width:40%;
 		}
 		img {
@@ -55,7 +55,7 @@
 		align-items: center;
 		justify-content: center;
 		margin-left:10%;
-		@include mq(tab){
+		@include mq(pc){
 			margin-left:10%;
 		}
 		@include mq(sp){
@@ -67,7 +67,7 @@
 		width:38px;
 		.fa-brands {
 			font-size: 38px;
-			@include mq(tab){
+			@include mq(pc){
 				font-size: 30px;
 			}
 		}
@@ -101,7 +101,7 @@
 		margin-top:1%;
 		text-align: center;
 		@include fz(14);
-		@include mq(tab){
+		@include mq(pc){
 			margin-top:5%;
 		}
 		@include mq(sp){

@@ -14,6 +14,9 @@
 		&__wrapper {
 			width:80%;
 			margin: 10% auto;
+			@include mq(pc){
+				width:90%;
+			}
 		}
 		&__txt {
 			@include fz(20);
@@ -42,18 +45,7 @@
 				.area {
 						align-items: baseline;
 				}
-				.visually-hidden {
-					position: absolute;
-					white-space: nowrap;
-					width: 1px;
-					height: 1px;
-					overflow: hidden;
-					border: 0;
-					padding: 0;
-					clip: rect(0 0 0 0);
-					clip-path: inset(50%); 
-					margin: -1px;
-				}
+				
 				&-ttl {
 						width: 30%;
 						height: 100%;
@@ -114,44 +106,8 @@
 								display: block;
 								width: 100%;
 								
-						}
-						&-radio{
-							&:checked + .contact-main__box-form-radio-label::after{
-									opacity: 1;//ラジオボタンがチェックされた時に見えるように
-							}
-							&-label {
-								padding-left:30px;
-								position: relative;
-								cursor: pointer;
-								@include mq(sp){
-									@include fz(14);
-								}
-								&::before,
-								&::after {
-									content: "";
-									display: block; 
-									border-radius: 50%;
-									position: absolute;
-									transform: translateY(-50%);
-									top: 50%;
-								}
-								&::before {
-									background-color: $cWhite;
-									border: 1px solid $cGRAY;
-									border-radius: 50%;
-									width: 20px;
-									height: 20px;
-									left: 5px;
-								}
-								&::after {
-									background-color: $cGreen;
-									border-radius: 50%;
-									opacity: 0;
-									width: 16px;
-									height: 16px;
-									left: 7px
-								}
-							}
+						
+						
 							
 						}
 				}
